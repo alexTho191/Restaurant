@@ -1,6 +1,9 @@
+const API_URL = import.meta.env.PROD 
+  ? import.meta.env.VITE_API_URL 
+  : "/api";
+
 export async function fetchUsuarios() {
-  const res = await fetch("/api/usuarios");
+  const res = await fetch(`${API_URL}/usuarios`);
   if (!res.ok) throw new Error("Error al obtener usuarios");
-  const data = await res.json();
-  return data;
+  return await res.json();
 }

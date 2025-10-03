@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://flask-api-kusu.onrender.com',
+        target: import.meta.env.VITE_API_URL, // se usa solo en desarrollo
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
