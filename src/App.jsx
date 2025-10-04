@@ -1,13 +1,13 @@
 import './index.css'
-import MainLayout from "./layouts/MainLayout";
-import UsersPage from "./pages/UsersPage";
+import LoginLayout from "./layouts/LoginLayout"
+import LoginPage from "./pages/LoginPage"
 
 function App() {
   return (
-    <MainLayout>
-      <UsersPage />
-    </MainLayout>
-  );
+    <LoginLayout>
+      <LoginPage />
+    </LoginLayout>
+  )
 }
 
-export default App;
+export default App
